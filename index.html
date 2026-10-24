@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Siddhi 💖</title>
+
+<style>
+:root {
+    --pink: #ff4f9a;
+    --rose: #ffb5d5;
+    --cream: #fff7f0;
+    --plum: #34182f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--cream);
+    font-family: Arial, sans-serif;
+    background: radial-gradient(ellipse at top, #74324e, #32182f 50%, #170f24);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.lights {
+    position: fixed;
+    inset: 0 0 auto;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.lights span {
+    width: 10px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffe6a6;
+    box-shadow: 0 0 18px 7px #ffcc7755;
+    margin-top: 18px;
+    animation: twinkle 1.8s infinite alternate;
+}
+
+.lights span:nth-child(odd) {
+    animation-delay: .7s;
+}
+
+@keyframes twinkle {
+    to {
+        opacity: .45;
+        box-shadow: 0 0 7px 2px #ffcc7755;
+    }
+}
+
+.wrap {
+    position: relative;
+    z-index: 1;
+    width: min(1100px, 94%);
+    margin: auto;
+    padding: 45px 0 35px;
+}
+
+.eyebrow {
+    text-align: center;
+    color: #ffc4df;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-size: .78rem;
+}
+
+.hero {
+    text-align: center;
+    margin: 12px 0 20px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1.02;
+    margin: 8px 0;
+    font-family: Georgia, serif;
+    font-weight: 700;
+    text-shadow: 0 5px 30px #ff4f9a44;
+}
+
+h1 em {
+    font-style: normal;
+    color: #ff7db6;
+    display: block;
+}
+
+.intro {
+    max-width: 620px;
+    margin: 16px auto;
+    color: #ffe5ef;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.panel {
+    background: #ffffff0d;
+    border: 1px solid #ffc4df3d;
+    border-radius: 26px;
+    padding: 24px;
+    box-shadow: 0 18px 55px #09051244;
+    backdrop-filter: blur(8px);
+}
+
+/* CAKE */
+
+.cake-panel {
+    text-align: center;
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake-scene {
+    height: 260px;
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin: 4px auto 12px;
+}
+
+.plate {
+    position: absolute;
+    bottom: 17px;
+    width: 280px;
+    height: 30px;
+    background: linear-gradient(#fff, #e4c7d5);
+    border-radius: 50%;
+    box-shadow: 0 9px 14px #10081880;
+}
+
+.cake {
+    position: absolute;
+    bottom: 34px;
+    width: 220px;
+    height: 130px;
+    border-radius: 18px 18px 25px 25px;
+    background: linear-gradient(
+        90deg,
+        #a84a36,
+        #e79b72 25%,
+        #f7c9a4 70%,
+        #a84a36
+    );
+    box-shadow: inset 0 -14px #6f2c34;
+    transition: transform .7s, opacity .7s;
+}
+
+.icing {
+    position: absolute;
+    top: -12px;
+    left: -4px;
+    width: 228px;
+    height: 42px;
+    border-radius: 50% 50% 12px 12px;
+    background: #fff0d7;
+    border-bottom: 8px dotted #ff83ae;
+    box-shadow: 0 6px 0 #8c3d43;
+}
+
+.icing::after {
+    content: '♥ ✦ ♥ ✦ ♥';
+    color: #ff4f9a;
+    font-size: 17px;
+    position: absolute;
+    top: 10px;
+    left: 34px;
+}
+
+.candle {
+    position: absolute;
+    bottom: 190px;
+    width: 9px;
+    height: 45px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff 0 6px,
+        #ff69a6 6px 12px
+    );
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.candle::before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 10px;
+    height: 15px;
+    background: #ffd46c;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 18px #ffb52e;
+    animation: flame .5s infinite alternate;
+}
+
+.c1 {
+    left: 105px;
+}
+
+.c2 {
+    left: 145px;
+    bottom: 200px;
+}
+
+.c3 {
+    left: 185px;
+}
+
+@keyframes flame {
+    to {
+        transform: rotate(-35deg) scale(.85);
+        opacity: .8;
+    }
+}
+
+/* CAKE CUTTING */
+
+.cake.cut {
+    opacity: .3;
+}
+
+.cake.cut .left {
+    transform: translateX(-65px) rotate(-12deg);
+}
+
+.cake.cut .right {
+    transform: translateX(65px) rotate(12deg);
+}
+
+.cake-halves {
+    position: absolute;
+    bottom: 34px;
+    width: 220px;
+    height: 130px;
+    pointer-events: none;
+}
+
+.cake-halves::before,
+.cake-halves::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 108px;
+    height: 125px;
+    background: linear-gradient(90deg, #a84a36, #f7c9a4);
+    border-bottom: 14px solid #6f2c34;
+    opacity: 0;
+    transition: .7s;
+}
+
+.cake-halves::before {
+    left: 0;
+    border-radius: 18px 0 0 22px;
+}
+
+.cake-halves::after {
+    right: 0;
+    border-radius: 0 18px 22px 0;
+}
+
+.cut .cake-halves::before,
+.cut .cake-halves::after {
+    opacity: 1;
+}
+
+.cut .icing {
+    display: none;
+}
+
+/* BUTTONS */
+
+.btn {
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 25px;
+    background: linear-gradient(135deg, #ff4f9a, #ff80b5);
+    color: white;
+    font-size: 1rem;
+    font-weight: 750;
+    cursor: pointer;
+    box-shadow: 0 8px 25px #ff4f9a44;
+    transition: transform .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: .7;
+    cursor: default;
+}
+
+.hint {
+    color: #f9cfe0;
+    font-size: .85rem;
+    margin: 12px 0 0;
+}
+
+/* MUSIC PLAYER */
+
+.right h2 {
+    font-size: 1.45rem;
+    margin: 0 0 7px;
+}
+
+.right p {
+    color: #f7dbe7;
+    line-height: 1.6;
+}
+
+.music-box {
+    padding: 17px;
+    background: #1e1025aa;
+    border: 1px solid #ffc4df44;
+    border-radius: 18px;
+    margin: 15px 0;
+}
+
+.music-row {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.album {
+    width: 65px;
+    height: 65px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #ffb6d5, #9b6bc0);
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.music-meta strong {
+    display: block;
+}
+
+.music-meta small {
+    color: #dcb8cc;
+}
+
+.audio {
+    width: 100%;
+    margin-top: 14px;
+    accent-color: #ff69a6;
+}
+
+.upload {
+    display: block;
+    font-size: .85rem;
+    color: #ffd8e8;
+    margin-top: 12px;
+}
+
+.upload input {
+    width: 100%;
+    margin-top: 7px;
+    font-size: .8rem;
+}
+
+/* PERSONAL NOTE */
+
+.note {
+    background: #fff0f6;
+    color: #50223c;
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 17px;
+    transform: rotate(-1deg);
+    font-family: Georgia, serif;
+    line-height: 1.65;
+}
+
+.note strong {
+    color: #cf337b;
+}
+
+.footer {
+    text-align: center;
+    color: #e8b6ce;
+    font-size: .82rem;
+    margin-top: 30px;
+}
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -15px;
+    width: 9px;
+    height: 13px;
+    z-index: 9;
+    pointer-events: none;
+    animation: fall 3.4s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(800deg);
+        opacity: .1;
+    }
+}
+
+@media (max-width: 760px) {
+    .wrap {
+        padding-top: 35px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    .cake-panel {
+        min-height: 410px;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .lights {
+        height: 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Decorative lights -->
+<div class="lights" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+</div>
+
+<main class="wrap">
+
+    <div class="eyebrow">
+        ✨ A little celebration, just for you ✨
+    </div>
+
+    <header class="hero">
+        <h1>
+            Happy Birthday
+            <em>SIDDHI 💖</em>
+        </h1>
+
+        <p class="intro">
+            To my wonderful best friend — may your day be full of
+            laughter, little surprises, big dreams, and all the
+            love you deserve. Keep being your beautiful,
+            one-of-a-kind self!
+        </p>
+    </header>
+
+    <section class="grid">
+
+        <!-- LEFT: BIRTHDAY CAKE -->
+
+        <div class="panel cake-panel">
+
+            <div class="cake-scene" id="cakeScene"
+                 aria-label="Birthday cake with three candles">
+
+                <div class="plate"></div>
+
+                <div class="candle c1"></div>
+                <div class="candle c2"></div>
+                <div class="candle c3"></div>
+
+                <div class="cake" id="cake">
+                    <div class="icing"></div>
+                </div>
+
+                <div class="cake-halves"></div>
+
+            </div>
+
+            <h2 id="cakeTitle">
+                Make a birthday wish! 🎂
+            </h2>
+
+            <button class="btn" id="cutBtn">
+                🎂 Cut the Cake!
+            </button>
+
+            <p class="hint" id="cakeHint">
+                Tap the button and let the celebration begin.
+            </p>
+
+        </div>
+
+        <!-- RIGHT: MUSIC AND PERSONAL MESSAGE -->
+
+        <div class="panel right">
+
+            <h2>🎶 Your Birthday Soundtrack</h2>
+
+            <p>
+                Pick a song from your device, press play,
+                and let's celebrate together!
+            </p>
+
+            <div class="music-box">
+
+                <div class="music-row">
+
+                    <div class="album">♫</div>
+
+                    <div class="music-meta">
+                        <strong id="songName">
+                            A song for Siddhi
+                        </strong>
+
+                        <small>Made with love 💗</small>
+                    </div>
+
+                </div>
+
+                <audio class="audio" id="player"
+                       controls preload="metadata"></audio>
+
+                <label class="upload">
+                    Choose a song from your device
+
+                    <input id="songFile" type="file"
+                           accept="audio/*">
+                </label>
+
+                <p class="hint">
+                    Tip: Choose your favourite birthday song
+                    from your device. Your browser may ask
+                    you to press play.
+                </p>
+
+            </div>
+
+            <div class="note">
+                <strong>Dear Siddhi,</strong>
+                <br>
+
+                Thank you for being the kind of friend who makes
+                ordinary days brighter. I hope this new year
+                brings you countless reasons to smile, the
+                courage to chase every dream, and memories
+                you'll treasure forever. You deserve the
+                happiest birthday!
+
+                <br><br>
+
+                With lots of love,
+                <strong>your bestie 💕</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="footer">
+        Made especially for SIDDHI · Blow out the candles,
+        make a wish, and smile! ✨
+    </div>
+
+</main>
+
+<script>
+
+// Cake cutting and celebration
+
+const cutBtn = document.getElementById('cutBtn');
+const scene = document.getElementById('cakeScene');
+const title = document.getElementById('cakeTitle');
+const hint = document.getElementById('cakeHint');
+
+let cut = false;
+
+// Confetti animation
+
+function confetti() {
+
+    const colors = [
+        '#ff5d9e',
+        '#ffd166',
+        '#b8f2e6',
+        '#cdb4db',
+        '#ffffff',
+        '#ff9f1c'
+    ];
+
+    for (let i = 0; i < 100; i++) {
+
+        const el = document.createElement('i');
+
+        el.className = 'confetti';
+
+        el.style.left = Math.random() * 100 + 'vw';
+
+        el.style.background =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        el.style.animationDelay =
+            (Math.random() * .9) + 's';
+
+        el.style.animationDuration =
+            (2.5 + Math.random() * 2) + 's';
+
+        el.style.transform =
+            'rotate(' + Math.random() * 360 + 'deg)';
+
+        document.body.appendChild(el);
+
+        setTimeout(() => el.remove(), 5000);
+    }
+}
+
+// Cake-cutting button
+
+cutBtn.addEventListener('click', () => {
+
+    if (!cut) {
+
+        cut = true;
+
+        scene.classList.add('cut');
+
+        title.textContent =
+            'Yay! Happy Birthday, Siddhi! 🎉';
+
+        hint.textContent =
+            "Wish made? Now let's enjoy some cake! 💗";
+
+        cutBtn.textContent =
+            '💖 Celebrate Again';
+
+        confetti();
+
+    } else {
+
+        cut = false;
+
+        scene.classList.remove('cut');
+
+        title.textContent =
+            'Make a birthday wish! 🎂';
+
+        hint.textContent =
+            'Tap the button and let the celebration begin.';
+
+        cutBtn.textContent =
+            '🎂 Cut the Cake!';
+
+    }
+
+});
+
+// Music player
+
+const fileInput = document.getElementById('songFile');
+
+const player = document.getElementById('player');
+
+const songName = document.getElementById('songName');
+
+let oldUrl;
+
+fileInput.addEventListener('change', () => {
+
+    const file = fileInput.files && fileInput.files[0];
+
+    if (!file) return;
+
+    if (oldUrl) {
+        URL.revokeObjectURL(oldUrl);
+    }
+
+    oldUrl = URL.createObjectURL(file);
+
+    player.src = oldUrl;
+
+    songName.textContent =
+        file.name.replace(/\.[^.]+$/, '');
+
+    player.play().catch(() => {});
+
+});
+
+</script>
+
+</body>
+</html>
